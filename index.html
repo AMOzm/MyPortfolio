@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important for responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amozm.0905</title>
   <style>
     html, body {
@@ -11,18 +11,23 @@
       height: 100%;
       width: 100%;
       overflow: hidden;
+      background: #000; /* optional: removes any white gaps showing behind */
     }
     .iframe-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       width: 100%;
       height: 100%;
       overflow: hidden;
-      position: relative;
     }
     iframe {
       width: 100%;
       height: calc(100% + 50px); /* Extra height to shift content up */
       border: none;
-      transform: translateY(-50px); /* Shift to crop top */
+      transform: translateY(-50px);
       display: block;
     }
   </style>

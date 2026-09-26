@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">   <!-- YouTube needs this to play embeds -->
   <title>Animations — Zijin Murong</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +26,13 @@
   <header class="site-header page-header">
     <div class="header-inner">
       <h1 class="name">Animations</h1>
-      <div class="tagline"><span class="tape" aria-hidden="true"></span><p>Coming soon.</p></div>
+      <div class="tagline"><span class="tape" aria-hidden="true"></span><p>Placeholder — a short line about your animation work.</p></div>
     </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
   </header>
+
+  <!-- ========== VIDEOS — edit the list in animations-data.js ========== -->
+  <main id="videos" class="stacks" aria-label="Animations"></main>
 
   <!-- ========== FOOTER — edit your extra info here ========== -->
   <footer class="site-footer">
@@ -57,6 +62,8 @@
     </div>
   </footer>
 
+  <script src="animations-data.js"></script>
   <script src="script.js"></script>
+  <script src="videos.js"></script>
 </body>
 </html>

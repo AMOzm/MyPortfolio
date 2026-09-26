@@ -14,7 +14,7 @@ window.PORTFOLIO = [
   {
     title: "G.I.R.L.S. will be Girls",
     meta: "Unity · PC · 2025",
-    description: "Tactical, grid-based tower defense set in a post pocalyptic world.",
+    description: "Tactical, grid-based tower defense set in a post-apocalyptic world.",
     url: "https://store.steampowered.com/app/4457870/GIRLS_will_be_Girls/",
     images: [
       "images/games/game1-1.png",

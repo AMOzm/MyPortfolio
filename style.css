@@ -1,4 +1,5 @@
 :root {
+  --stack-scale: 0.8;   /* size of the project stacks: 1 = original, 0.8 = 80% */
   --bg: #ffffff;
   --surface: #ffffff;
   --text: #2f352f;
@@ -151,7 +152,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   display: grid;
   /* Middle column fills the screen width, but never gets taller than the window
      so the whole image stays visible. Change it to 1fr to always use the full width. */
-  grid-template-columns: 52px minmax(0, calc((100vh - 140px) * 4 / 3)) 52px;
+  grid-template-columns: 52px minmax(0, calc((100vh - 140px) * 4 / 3 * var(--stack-scale))) 52px;
   justify-content: center;
   align-items: center;
   gap: clamp(12px, 2vw, 32px);
@@ -675,7 +676,7 @@ body::before {
   .avatar { width: 46px; height: 46px; }
   .site-header { padding-top: 40px; }
   .nav-links { gap: 6px; }
-  .stack-stage { grid-template-columns: 38px 1fr 38px; gap: 8px; }
+  .stack-stage { grid-template-columns: 38px minmax(0, calc((100vw - 108px) * var(--stack-scale))) 38px; gap: 8px; justify-content: center; }
   .stack-btn { width: 38px; height: 38px; }
   .stack-section { padding-left: 16px; padding-right: 16px; }
   .card-inner { padding: 6px; }

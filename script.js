@@ -117,7 +117,8 @@
     function fit() {
       const W = stackEl.clientWidth;
       if (!W) return;
-      const Hmax = Math.max(240, Math.min(window.innerHeight - 200, W * 1.5));
+      const scale = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--stack-scale")) || 1;
+      const Hmax = Math.max(200, Math.min((window.innerHeight - 200) * scale, W * 1.5));
       const cs = getComputedStyle(cards[0].firstChild);
       const frame = (parseFloat(cs.paddingLeft) + parseFloat(cs.borderLeftWidth)) * 2;
       const sizes = cards.map((c) => {

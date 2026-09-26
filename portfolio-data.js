@@ -27,7 +27,7 @@ window.PORTFOLIO = [
     ],
   },
   {
-    title: "Character Designs",
+    title: "Illustration Commissions",
     meta: "Sketchbook · 2024 - Present",
     description: "Some selected character design works.",
     images: [
@@ -40,6 +40,26 @@ window.PORTFOLIO = [
       "images/project2-7.png",
       "images/project2-8.png",
       "images/project2-9.png",
+      "images/project2-10.png",
+      "images/project2-11.png",
+      "images/project2-12.png",
+      "images/project2-13.png",
+      "images/project2-14.png",
+      "images/project2-15.png",
+      "images/project2-16.png",
+    ],
+  },
+  {
+    title: "Comic Pages",
+    meta: "Selected works · 2024 - Present",
+    description: "Some selected Illutstrated works.",
+    images: [
+      "images/project3-1.png",
+      "images/project3-2.png",
+      "images/project3-3.png",
+      "images/project3-4.png",
+      "images/project3-5.png",
+      "images/project3-6.png",
     ],
   },
 ];

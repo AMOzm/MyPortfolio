@@ -16,6 +16,24 @@
     else window.addEventListener("resize", setBarHeight);
   }
 
+  // Hero pictures cross-fade: each shows for HERO_SECONDS, then fades into the next
+  (function heroRotate() {
+    const HERO_SECONDS = 5;
+    document.querySelectorAll(".hero-art").forEach((art) => {
+      const imgs = [...art.querySelectorAll("img")];
+      if (imgs.length < 2) return;
+      art.classList.add("is-rotating");
+      let i = 0;
+      imgs[0].classList.add("is-active");
+      setInterval(() => {
+        if (document.hidden) return;                   // don't advance while the tab is in the background
+        imgs[i].classList.remove("is-active");
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add("is-active");
+      }, HERO_SECONDS * 1000);
+    });
+  })();
+
   // Background grid follows the cursor slightly (smoothly eased)
   (function gridParallax() {
     const MAX_SHIFT = 16; // px the grid can move from center; raise for a stronger effect

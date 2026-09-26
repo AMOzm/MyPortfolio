@@ -1042,3 +1042,28 @@ body::after { filter: var(--bg-image-filter); }
 }
 .video-facade:hover .video-play { transform: scale(1.08); }
 .video-facade:focus-visible { outline: 3px solid var(--red, #8e2f25); outline-offset: 3px; }
+
+
+/* Home hero: several pictures stacked in the same spot, cross-fading */
+.hero-art { display: grid; place-items: center; }
+.hero-art img {
+  grid-area: 1 / 1;
+  transition: opacity 1.4s ease;
+}
+.hero-art img:not(:first-child),
+.hero-art.is-rotating img { opacity: 0; }   /* extra pictures start hidden (no flash on load) */
+.hero-art.is-rotating img.is-active { opacity: 1; }
+
+/* Games + Animations pages: header picture size — change these two numbers.
+   --page-hero-height: tallest the picture may be (Home uses 72vh).
+   --page-hero-column: share of the width the picture side gets (1fr = half the page, 1.4fr = bigger). */
+.page-header.hero {
+  --page-hero-height: 72vh;
+  --page-hero-column: 1.2fr;
+}
+.page-header.hero .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, var(--page-hero-column)); }
+.page-header.hero .hero-art img { max-height: var(--page-hero-height); }
+@media (max-width: 860px) {
+  .page-header.hero .hero-grid { grid-template-columns: 1fr; }
+  .page-header.hero .hero-art img { max-height: 48vh; }
+}
